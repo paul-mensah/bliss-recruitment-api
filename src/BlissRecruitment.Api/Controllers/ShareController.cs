@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using BlissRecruitment.Core.Models.Requests;
+using BlissRecruitment.Core.Models.Responses;
 using BlissRecruitment.Core.Services.Email;
 using Microsoft.AspNetCore.Mvc;
 

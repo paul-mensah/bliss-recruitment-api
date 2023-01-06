@@ -1,4 +1,4 @@
-﻿namespace BlissRecruitment.Core.Models.Requests;
+﻿namespace BlissRecruitment.Core.Models.Responses;
 
 public class StatusOnlyResponse
 {
