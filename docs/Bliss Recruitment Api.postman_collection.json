@@ -1,0 +1,834 @@
+{
+	"info": {
+		"_postman_id": "aaca16ac-9730-49d9-b006-9ee580c0a3a8",
+		"name": "Bliss Recruitment Api",
+		"description": "Bliss Recruitment Api\n\nContact Support:\n Name: Paul Mensah\n Email: paulmensah1409@gmail.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11808320"
+	},
+	"item": [
+		{
+			"name": "questions",
+			"item": [
+				{
+					"name": "{question Id}",
+					"item": [
+						{
+							"name": "Retrieve a question",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/questions/:questionId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"questions",
+										":questionId"
+									],
+									"variable": [
+										{
+											"key": "questionId",
+											"value": "velit do",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/questions/:questionId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"questions",
+												":questionId"
+											],
+											"variable": [
+												{
+													"key": "questionId",
+													"value": "velit do",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"laborum id amet\",\n  \"image_url\": \"fugiat sunt\",\n  \"thumb_url\": \"anim magna mollit velit\",\n  \"question\": \"consectetur Duis sint eu eiusmod\",\n  \"choices\": [\n    {\n      \"choice\": \"mollit\",\n      \"votes\": -31523093\n    },\n    {\n      \"choice\": \"velit Duis quis proident\",\n      \"votes\": -46522\n    }\n  ],\n  \"published_at\": \"1967-03-11T01:15:27.307Z\"\n}"
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/questions/:questionId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"questions",
+												":questionId"
+											],
+											"variable": [
+												{
+													"key": "questionId",
+													"value": "velit do",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"amet\"\n}"
+								},
+								{
+									"name": "Server Error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/questions/:questionId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"questions",
+												":questionId"
+											],
+											"variable": [
+												{
+													"key": "questionId",
+													"value": "velit do",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"amet\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Update a question",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"image_url\": \"https://LdBBorbHeyvAiyMMSQWHMlbRpdnvUd.yjsTe1.VbAmc07TurlK5X4,qvMRx\",\n  \"question\": \"fugiat occaecat\",\n  \"thumb_url\": \"http://SjrEMdn.qqzSOXH8IiIiUYge.Xe,i6ngJg4ELCQR6kdXQWY+RFeE4p2fr31arYXV\",\n  \"choices\": [\n    {\n      \"choice\": \"ut occaecat\",\n      \"votes\": -31257184\n    },\n    {\n      \"choice\": \"cillum sit deserunt dolore\",\n      \"votes\": 80634531\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/questions/:questionId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"questions",
+										":questionId"
+									],
+									"variable": [
+										{
+											"key": "questionId",
+											"value": "velit do",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Created",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"image_url\": \"http://OWmAODQXsbnXjVDiTWuUrnioyWT.mlpWswKTqLorkpZt1vD-F1CyASIDm.E.a\",\n  \"question\": \"aute sint occaecat mollit in\",\n  \"thumb_url\": \"http://XUGBcbrpoBgezfQVYNJcmyxLnaA.bdHJR-lTSdHlF7JjZLP\",\n  \"choices\": [\n    {\n      \"choice\": \"pariatur in tempor nisi\",\n      \"votes\": -22933139\n    },\n    {\n      \"choice\": \"laboris ut occaecat\",\n      \"votes\": 44189365\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/questions/:questionId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"questions",
+												":questionId"
+											],
+											"variable": [
+												{
+													"key": "questionId",
+													"value": "velit do",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"laborum id amet\",\n  \"image_url\": \"fugiat sunt\",\n  \"thumb_url\": \"anim magna mollit velit\",\n  \"question\": \"consectetur Duis sint eu eiusmod\",\n  \"choices\": [\n    {\n      \"choice\": \"mollit\",\n      \"votes\": -31523093\n    },\n    {\n      \"choice\": \"velit Duis quis proident\",\n      \"votes\": -46522\n    }\n  ],\n  \"published_at\": \"1967-03-11T01:15:27.307Z\"\n}"
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"image_url\": \"http://OWmAODQXsbnXjVDiTWuUrnioyWT.mlpWswKTqLorkpZt1vD-F1CyASIDm.E.a\",\n  \"question\": \"aute sint occaecat mollit in\",\n  \"thumb_url\": \"http://XUGBcbrpoBgezfQVYNJcmyxLnaA.bdHJR-lTSdHlF7JjZLP\",\n  \"choices\": [\n    {\n      \"choice\": \"pariatur in tempor nisi\",\n      \"votes\": -22933139\n    },\n    {\n      \"choice\": \"laboris ut occaecat\",\n      \"votes\": 44189365\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/questions/:questionId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"questions",
+												":questionId"
+											],
+											"variable": [
+												{
+													"key": "questionId",
+													"value": "velit do",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"amet\"\n}"
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"image_url\": \"http://OWmAODQXsbnXjVDiTWuUrnioyWT.mlpWswKTqLorkpZt1vD-F1CyASIDm.E.a\",\n  \"question\": \"aute sint occaecat mollit in\",\n  \"thumb_url\": \"http://XUGBcbrpoBgezfQVYNJcmyxLnaA.bdHJR-lTSdHlF7JjZLP\",\n  \"choices\": [\n    {\n      \"choice\": \"pariatur in tempor nisi\",\n      \"votes\": -22933139\n    },\n    {\n      \"choice\": \"laboris ut occaecat\",\n      \"votes\": 44189365\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/questions/:questionId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"questions",
+												":questionId"
+											],
+											"variable": [
+												{
+													"key": "questionId",
+													"value": "velit do",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"amet\"\n}"
+								},
+								{
+									"name": "Client Error",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"image_url\": \"http://OWmAODQXsbnXjVDiTWuUrnioyWT.mlpWswKTqLorkpZt1vD-F1CyASIDm.E.a\",\n  \"question\": \"aute sint occaecat mollit in\",\n  \"thumb_url\": \"http://XUGBcbrpoBgezfQVYNJcmyxLnaA.bdHJR-lTSdHlF7JjZLP\",\n  \"choices\": [\n    {\n      \"choice\": \"pariatur in tempor nisi\",\n      \"votes\": -22933139\n    },\n    {\n      \"choice\": \"laboris ut occaecat\",\n      \"votes\": 44189365\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/questions/:questionId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"questions",
+												":questionId"
+											],
+											"variable": [
+												{
+													"key": "questionId",
+													"value": "velit do",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Failed Dependency (WebDAV) (RFC 4918)",
+									"code": 424,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"amet\"\n}"
+								},
+								{
+									"name": "Server Error",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"image_url\": \"http://OWmAODQXsbnXjVDiTWuUrnioyWT.mlpWswKTqLorkpZt1vD-F1CyASIDm.E.a\",\n  \"question\": \"aute sint occaecat mollit in\",\n  \"thumb_url\": \"http://XUGBcbrpoBgezfQVYNJcmyxLnaA.bdHJR-lTSdHlF7JjZLP\",\n  \"choices\": [\n    {\n      \"choice\": \"pariatur in tempor nisi\",\n      \"votes\": -22933139\n    },\n    {\n      \"choice\": \"laboris ut occaecat\",\n      \"votes\": 44189365\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/questions/:questionId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"questions",
+												":questionId"
+											],
+											"variable": [
+												{
+													"key": "questionId",
+													"value": "velit do",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"status\": \"amet\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Create a new question",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"image_url\": \"http://nqOOAzDk.holaER2n6CaCfKLkkhNhfJl.RYUfwjt-dE9o6UxE1x,c94YYYy1\",\n  \"question\": \"in non eu\",\n  \"thumb_url\": \"https://DzaObxWNtGGJCLjHdzEPAgehpAFWMPQ.ljM+.\",\n  \"choices\": [\n    \"aliquip adipisicing cillum\",\n    \"in dolor esse non\"\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/questions",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"questions"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"image_url\": \"https://nfPu.ynkphtuZ0jSeKCVZtKsNkA0y-0Kvf2EzPiu4GSqoDXHjKEZvtyiEQ\",\n  \"question\": \"ut\",\n  \"thumb_url\": \"http://uQDUWKNLtjK.jhi0PHPbsleQb7C\",\n  \"choices\": [\n    \"dolor nostrud ut in\",\n    \"consequat sit proident Duis\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/questions",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"questions"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"id\": \"\",\n  \"image_url\": \"esse ullamco\",\n  \"thumb_url\": \"nostrud Ut eiusmod enim\",\n  \"question\": \"do anim mollit\",\n  \"choices\": [\n    {\n      \"choice\": \"irure Lorem magna\",\n      \"votes\": 32644209\n    },\n    {\n      \"choice\": \"labore dolore tempor\",\n      \"votes\": -10772738\n    }\n  ],\n  \"published_at\": \"1979-05-04T06:24:03.696Z\"\n}"
+						},
+						{
+							"name": "Bad Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"image_url\": \"https://nfPu.ynkphtuZ0jSeKCVZtKsNkA0y-0Kvf2EzPiu4GSqoDXHjKEZvtyiEQ\",\n  \"question\": \"ut\",\n  \"thumb_url\": \"http://uQDUWKNLtjK.jhi0PHPbsleQb7C\",\n  \"choices\": [\n    \"dolor nostrud ut in\",\n    \"consequat sit proident Duis\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/questions",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"questions"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"status\": \"amet\"\n}"
+						},
+						{
+							"name": "Client Error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"image_url\": \"https://nfPu.ynkphtuZ0jSeKCVZtKsNkA0y-0Kvf2EzPiu4GSqoDXHjKEZvtyiEQ\",\n  \"question\": \"ut\",\n  \"thumb_url\": \"http://uQDUWKNLtjK.jhi0PHPbsleQb7C\",\n  \"choices\": [\n    \"dolor nostrud ut in\",\n    \"consequat sit proident Duis\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/questions",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"questions"
+									]
+								}
+							},
+							"status": "Failed Dependency (WebDAV) (RFC 4918)",
+							"code": 424,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"status\": \"amet\"\n}"
+						},
+						{
+							"name": "Server Error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"image_url\": \"https://nfPu.ynkphtuZ0jSeKCVZtKsNkA0y-0Kvf2EzPiu4GSqoDXHjKEZvtyiEQ\",\n  \"question\": \"ut\",\n  \"thumb_url\": \"http://uQDUWKNLtjK.jhi0PHPbsleQb7C\",\n  \"choices\": [\n    \"dolor nostrud ut in\",\n    \"consequat sit proident Duis\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/questions",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"questions"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"status\": \"amet\"\n}"
+						}
+					]
+				},
+				{
+					"name": "List all questions",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/questions?Limit=3&Offset=6456153&Filter=velit do",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"questions"
+							],
+							"query": [
+								{
+									"key": "Limit",
+									"value": "3"
+								},
+								{
+									"key": "Offset",
+									"value": "6456153"
+								},
+								{
+									"key": "Filter",
+									"value": "velit do"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/questions?Limit=3&Offset=6456153&Filter=velit do",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"questions"
+									],
+									"query": [
+										{
+											"key": "Limit",
+											"value": "3"
+										},
+										{
+											"key": "Offset",
+											"value": "6456153"
+										},
+										{
+											"key": "Filter",
+											"value": "velit do"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"id\": \"esse anim aute commodo dolore\",\n    \"image_url\": \"aliquip\",\n    \"thumb_url\": \"veniam nisi\",\n    \"question\": \"mollit ut et\",\n    \"choices\": [\n      {\n        \"choice\": \"proident id\",\n        \"votes\": 98653585\n      },\n      {\n        \"choice\": \"quis aliqua cupidatat dolore veni\",\n        \"votes\": -14252265\n      }\n    ],\n    \"published_at\": \"1992-07-23T07:41:41.893Z\"\n  },\n  {\n    \"id\": \"cupidatat Excepteur\",\n    \"image_url\": \"consectetur culpa id ea ullamco\",\n    \"thumb_url\": \"a\",\n    \"question\": \"enim sit Lorem\",\n    \"choices\": [\n      {\n        \"choice\": \"enim magna amet\",\n        \"votes\": 19349892\n      },\n      {\n        \"choice\": \"dolore\",\n        \"votes\": 77335272\n      }\n    ],\n    \"published_at\": \"1960-08-08T20:41:54.234Z\"\n  }\n]"
+						},
+						{
+							"name": "Server Error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/questions?Limit=3&Offset=6456153&Filter=velit do",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"questions"
+									],
+									"query": [
+										{
+											"key": "Limit",
+											"value": "3"
+										},
+										{
+											"key": "Offset",
+											"value": "6456153"
+										},
+										{
+											"key": "Filter",
+											"value": "velit do"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"status\": \"amet\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Share",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "text/plain"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/share?destinationEmail=N6gF3KmoTWyb@yUGUGPFYJOtyXOPsRLyLGqzHbahHZG.tzkh&contentUrl=velit do",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"share"
+					],
+					"query": [
+						{
+							"key": "destinationEmail",
+							"value": "N6gF3KmoTWyb@yUGUGPFYJOtyXOPsRLyLGqzHbahHZG.tzkh"
+						},
+						{
+							"key": "contentUrl",
+							"value": "velit do"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Bad Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/share?destinationEmail=N6gF3KmoTWyb@yUGUGPFYJOtyXOPsRLyLGqzHbahHZG.tzkh&contentUrl=velit do",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"share"
+							],
+							"query": [
+								{
+									"key": "destinationEmail",
+									"value": "N6gF3KmoTWyb@yUGUGPFYJOtyXOPsRLyLGqzHbahHZG.tzkh"
+								},
+								{
+									"key": "contentUrl",
+									"value": "velit do"
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"status\": \"amet\"\n}"
+				},
+				{
+					"name": "Server Error",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/share?destinationEmail=N6gF3KmoTWyb@yUGUGPFYJOtyXOPsRLyLGqzHbahHZG.tzkh&contentUrl=velit do",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"share"
+							],
+							"query": [
+								{
+									"key": "destinationEmail",
+									"value": "N6gF3KmoTWyb@yUGUGPFYJOtyXOPsRLyLGqzHbahHZG.tzkh"
+								},
+								{
+									"key": "contentUrl",
+									"value": "velit do"
+								}
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"status\": \"amet\"\n}"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "/",
+			"type": "string"
+		}
+	]
+}
